@@ -193,6 +193,7 @@
         function getConfig() 
 		{
 			$config = getModel('module')->getModuleConfig('pointhistory');
+			if (!$config) $config = new stdClass();
 			
 			if(!$config->member_menu_name || $config->member_menu_name == Context::getLang('point_history_list'))
 			{
